@@ -46,7 +46,7 @@ module.exports = {
 };
 ```
 
-run pull
+run generate
 
 ```bash
 # type: atom|molecule|organize|form
@@ -54,7 +54,33 @@ npx acrool-react-component generate -t {type} -n {componentName}
 ```
 
 
-## Build
+--- 
+
+Here is a faster way
+your can add in your package.json
+
+```json
+{
+  "scripts": {
+    "dev": "next dev",
+    "comp": "acrool-react-component generate"
+  }
+}
+```
+fast run
+
+```bash
+yarn comp -n TitleBlock
+
+# ✔ The component has been successfully generated to ./src/components/atoms/TitleName
+# ✨  Done in 0.12s.
+```
+
+
+
+## Develop
+
+build
 
 ```bash
 yarn build && npx acrool-react-component generate -n TitleBlock
