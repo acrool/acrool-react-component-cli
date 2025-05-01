@@ -1,0 +1,74 @@
+{
+  "name": "@acrool/react-component-cli",
+  "version": "1.0.0",
+  "description": "Pull acrool icon symbols to project cli",
+  "keywords": [
+    "typescript",
+    "acrool",
+    "svg-symbols"
+  ],
+  "author": "imagine10255@gmail.com",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acrool/acrool-react-component-cli.git"
+  },
+  "bin": {
+    "acrool-react-component": "dist/bin/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "npm": ">=6",
+    "node": ">=14.5.0"
+  },
+  "scripts": {
+    "build": "run-s build:claer && tsc --project ./tsconfig.build.json && run-s copy-dts && run-s chmodBin",
+    "copy-dts": "copyfiles -u 1 \\\"lib/**/*.d.ts\\\" dist",
+    "build:claer": "rm -rf ./dist",
+    "prepublishOnly": "run-s build",
+    "chmodBin": "chmod +x ./dist/bin/cli.js",
+    "test": "jest",
+    "pretest": "run-s build",
+    "lint:fix": "eslint ./src --fix",
+    "release": "standard-version --release-as",
+    "release:major": "standard-version -r major",
+    "release:minor": "standard-version -r minor",
+    "release:patch": "standard-version -r patch",
+    "release:alpha": "standard-version --prerelease alpha"
+  },
+  "dependencies": {
+    "@acrool/icon-symbols": "2.0.0",
+    "axios": "^1.9.0",
+    "chalk": "^5.4.1",
+    "commander": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/jest": "^29.5.0",
+    "@types/node": "20.17.32",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "babel-eslint": "^10.0.3",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "3.3.0",
+    "cz-customizable": "6.6.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "jest": "^29.5.0",
+    "npm-run-all": "^4.1.5",
+    "standard-version": "9.5.0",
+    "ts-jest": "^29.3.2",
+    "ts-node": "10.8.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}
