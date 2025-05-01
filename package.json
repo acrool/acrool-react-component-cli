@@ -1,6 +1,6 @@
 {
   "name": "@acrool/react-component-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly create React components using CLI",
   "keywords": [
     "typescript",
