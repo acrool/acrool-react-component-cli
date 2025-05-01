@@ -1,11 +1,11 @@
 {
   "name": "@acrool/react-component-cli",
   "version": "1.0.0",
-  "description": "Pull acrool icon symbols to project cli",
+  "description": "Quickly create React components using CLI",
   "keywords": [
     "typescript",
     "acrool",
-    "svg-symbols"
+    "react-component-cli"
   ],
   "author": "imagine10255@gmail.com",
   "license": "MIT",
