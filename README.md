@@ -1,8 +1,8 @@
 # Acrool React Component CLI
 
 
-<a href="https://github.com/acrool/acrool-react-component-cli" title="Acrool React Component CLI - Fast custom img for Reactjs">
-    <img src="https://raw.githubusercontent.com/acrool/acrool-react-component-cli/refs/heads/main/public/og.png" alt="Acrool React Component CLI Logo"/>
+<a href="https://github.com/acrool/acrool-react-component-cli" title="Acrool React Component CLI - Quickly create React components using CLI">
+    <img src="https://raw.githubusercontent.com/acrool/acrool-react-component-cli/main/public/og.png" alt="Acrool React Component CLI Logo"/>
 </a>
 
 <p align="center">
